@@ -91,6 +91,7 @@ class ViewController: UIViewController {
         
         itemBehavior = UIDynamicItemBehavior(items: ballViews)
         itemBehavior.action = {
+            [unowned self] in
             self.ballCenterPoints = self.ballViews.map{ $0.center }
             self.redrawLineView()
         }
